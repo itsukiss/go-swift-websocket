@@ -1,0 +1,15 @@
+.DS_Store
+Pods
+build
+xcuserdata
+.idea
+vendor/bundle
+
+# Carthage
+Carthage/Checkouts
+!Carthage/Build
+
+# build
+*.ipa
+*.dSYM.zip
+*.dSYM
