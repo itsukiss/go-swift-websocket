@@ -1,7 +1,17 @@
 syntax = "proto3";
 package example;
+import "google/protobuf/any.proto";
+
+message MetaData {
+    google.protobuf.Any data = 1; 
+}
 
 message User {
     int32 id = 1;
     string name = 2;
+}
+
+message Room {
+    int32 id = 1;
+    repeated User users = 2;
 }

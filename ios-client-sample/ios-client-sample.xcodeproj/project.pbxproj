@@ -13,7 +13,7 @@
 		0189707122F816B70057A30B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0189707022F816B70057A30B /* Assets.xcassets */; };
 		0189707422F816B70057A30B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0189707222F816B70057A30B /* LaunchScreen.storyboard */; };
 		80382B0B691D9CDD7AA1F025 /* Pods_ios_client_sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC374813DAD4626F585B3A8C /* Pods_ios_client_sample.framework */; };
-		C2AB51CD22FC24F7001D94E4 /* example.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AB51CC22FC24F7001D94E4 /* example.pb.swift */; };
+		C2B4F4DD233E10EA00183B45 /* example.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B4F4DC233E10EA00183B45 /* example.pb.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,7 @@
 		5E144A2AD5E9C06003643A3A /* Pods-ios-client-sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-client-sample.release.xcconfig"; path = "Target Support Files/Pods-ios-client-sample/Pods-ios-client-sample.release.xcconfig"; sourceTree = "<group>"; };
 		99F3EFA211C44A69EB7961BE /* Pods-ios-client-sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-client-sample.debug.xcconfig"; path = "Target Support Files/Pods-ios-client-sample/Pods-ios-client-sample.debug.xcconfig"; sourceTree = "<group>"; };
 		AC374813DAD4626F585B3A8C /* Pods_ios_client_sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_client_sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2AB51CC22FC24F7001D94E4 /* example.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = example.pb.swift; sourceTree = "<group>"; };
+		C2B4F4DC233E10EA00183B45 /* example.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = example.pb.swift; path = "../../local-server-sample/starscream-server/protos/example.pb.swift"; sourceTree = "<group>"; };
 		E58C0167015B31346D0C3EFC /* Pods-tapple-event-sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tapple-event-sample.debug.xcconfig"; path = "Target Support Files/Pods-tapple-event-sample/Pods-tapple-event-sample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,8 +67,8 @@
 			children = (
 				0189706922F816B60057A30B /* AppDelegate.swift */,
 				0189706B22F816B60057A30B /* ViewController.swift */,
-				C2AB51CC22FC24F7001D94E4 /* example.pb.swift */,
 				0189706D22F816B60057A30B /* Main.storyboard */,
+				C2B4F4DC233E10EA00183B45 /* example.pb.swift */,
 				0189707022F816B70057A30B /* Assets.xcassets */,
 				0189707222F816B70057A30B /* LaunchScreen.storyboard */,
 				0189707522F816B70057A30B /* Info.plist */,
@@ -210,7 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2AB51CD22FC24F7001D94E4 /* example.pb.swift in Sources */,
+				C2B4F4DD233E10EA00183B45 /* example.pb.swift in Sources */,
 				0189706C22F816B60057A30B /* ViewController.swift in Sources */,
 				0189706A22F816B60057A30B /* AppDelegate.swift in Sources */,
 			);

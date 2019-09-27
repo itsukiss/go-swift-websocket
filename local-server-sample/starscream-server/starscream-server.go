@@ -4,6 +4,7 @@ import (
 	"./protos"
 	"flag"
 	"github.com/golang/protobuf/proto"
+	"github.com/golang/protobuf/ptypes/any"
 	"github.com/gorilla/websocket"
 	"log"
 	"net/http"
@@ -45,8 +46,21 @@ func getSerializeData() (res []byte) {
 		log.Print("marshal error")
 		return
 	}
-	log.Print("serialize success: ", buff)
-	return buff
+	metaData := &example.MetaData{
+		Data: &any.Any{
+			TypeUrl: "tapple.com/protobuf/" + proto.MessageName(test),
+			Value:   buff,
+		},
+	}
+
+	buff2, err2 := proto.Marshal(metaData)
+	if err2 != nil {
+		log.Print("marshal error")
+		return
+	}
+
+	log.Print("serialize success: ", buff2)
+	return buff2
 }
 
 /*

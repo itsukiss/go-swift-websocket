@@ -127,10 +127,18 @@ extension ViewController: WebSocketDelegate {
     }
     
     func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
-        guard let user = try? Example_User(serializedData: data) else {
+        guard let metaData = try? Example_MetaData(serializedData: data) else {
             self.textView.text = self.textView.text + "Received data couldn't parsed"
             return
         }
-        self.textView.text = self.textView.text + "Received data: \(user)\n"
+        if metaData.data.isA(Example_User.self) {
+            guard let user = try? Example_User(serializedData: metaData.data.value) else {
+                self.textView.text = self.textView.text + "Received data couldn't parsed"
+                return
+            }
+            self.textView.text = self.textView.text + "Received data: \(user)\n"
+        } else {
+            self.textView.text = self.textView.text + "Received data don't include message class"
+        }
     }
 }
